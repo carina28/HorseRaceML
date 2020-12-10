@@ -2,12 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Horse Race Data Dashboard</title>
 </head>
 
 <body>
-    <h1>Dashboard</h1>
+    <nav>
+        <a href="#Dashboard">Dashboard</a>
+        <ul>
+            <li>
+                <a href="#Prediction">Prediction</a>
+            </li>
+            <li>
+                <a href="#Table">Table</a>
+            </li>
+            <li>
+                <a href="#About">About</a>
+            </li>
+        </ul>
+        <a href="#Logout">Logout</a>
+    </nav>
+
+    {% if message %}
+    <p class="message" id="error-message">{{ message | safe }}</p>
+    {% endif %}
+    <h1>Triple Crown Horse Race Dashboard</h1>
+    <div class="dashboard">
+
+        <div id="horse-rank-finish">
+            <form action="/go-dates" method="POST">
+                <div id="year-select-start">
+                    <label class="year-label" for="year-select-start">Select Start Year:</label>
+                    <select class="year-select" name="year-select-start">
+                        <option value="All">--Select Start--</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                        <option value="2013">2013</option>
+                        <option value="2012">2012</option>
+                        <option value="2011">2011</option>
+                        <option value="2010">2010</option>
+                        <option value="2009">2009</option>
+                        <option value="2008">2008</option>
+                        <option value="2007">2007</option>
+                        <option value="2006">2006</option>
+                        <option value="2005" selected>2005</option>
+                    </select>
+                </div>
+                <div id="year-select-end">
+                    <label class="year-label" for="year-select-end">Select End Year:</label>
+                    <select class="year-select" name="year-select-end">
+                        <option value="All">--Select End--</option>
+                        <option value="2019" selected>2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                        <option value="2014">2014</option>
+                        <option value="2013">2013</option>
+                        <option value="2012">2012</option>
+                        <option value="2011">2011</option>
+                        <option value="2010">2010</option>
+                        <option value="2009">2009</option>
+                        <option value="2008">2008</option>
+                        <option value="2007">2007</option>
+                        <option value="2006">2006</option>
+                        <option value="2005">2005</option>
+                    </select>
+<!--                    <input type="button" id="year-select-button" value="Go">-->
+                    <button id="year-select-button">Go</button>
+                </div>
+            </form>
+            <!-- put pie chart here -->
+        </div>
+        <div id="track-condition">
+
+        </div>
+        <div id="line-graph">
+
+        </div>
+        <div id="bar-graph">
+
+        </div>
+
+    </div>
+
 </body>
 
 </html>

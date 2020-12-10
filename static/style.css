@@ -1,5 +1,185 @@
-* {
-    box-sizing: border-box;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* body {
+
+} */
+
+nav {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    background-color: #117777;
+    height: 40px;
+    align-items: flex-end;
+    padding: 0 12px 8px 12px;
+}
+
+.dashboard {
+    border: 3px solid #323031;
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul,li {
+    display: inline;
     margin: 0;
     padding: 0;
+}
+
+ul {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover, nav a:focus {
+    text-decoration: underline;
+    color: rgba(221, 221, 221, 0.87);
+}
+
+h1 {
+    font-size: 2.8em;
+    text-align: center;
+    color: #323031;
+    padding: 15px 10px;
+    text-decoration: underline;
+}
+
+.year-label {
+    font-size: 1.2em;
+    padding: 50px 5px;
+}
+
+/* select {
+    font-size: 0.85em;
+    padding: 5px 5px;
+} */
+
+#horse-rank-finish {
+    width: 50%;
+    height: 500px;
+    background-color: #084C61;
+    display: flex;
+}
+
+form:first-of-type {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+
+
+#track-condition {
+    width: 50%;
+    height: 500px;
+    background-color: #FFC857;
+}
+
+#line-graph {
+    width: 50%;
+    height: 500px;
+    background-color: rgb(27, 27, 104);
+}
+
+#bar-graph {
+    width: 50%;
+    height: 500px;
+    background-color: #DB3A34
+}
+
+body {
+    background-color: rgba(221, 221, 221, 0.87);
+}
+
+#year-select-button {
+    margin: 0 8px;
+    width: 4em;
+    max-width: 6em;
+    height: 1.5em;
+    align-self: center;
+    align-content: center;
+}
+
+#error-message {
+    font-size: 100px;
+}
+
+@media (max-width: 600px) {
+    nav, nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* flex-wrap: wrap; */
+    }
+    nav {
+        height: 140px;
+        padding: 8px 12px 8px 12px;
+    }
+    .dashboard, #horse-rank-finish, #track-condition, #line-graph, #bar-graph {
+        flex-direction: column;
+        width: 100%;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    .year-label {
+
+    }
+
 }
