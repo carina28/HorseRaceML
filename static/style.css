@@ -123,7 +123,9 @@ form:first-of-type {
     flex-wrap: wrap;
 }
 
-
+/*#rec-year-start, rec-year-end {
+    font-size: 10em;
+}*/
 
 #track-condition {
     width: 50%;
@@ -156,6 +158,11 @@ body {
     align-content: center;
 }
 
+#about p {
+    margin: 100px 100px;
+    font: green;
+}
+
 #error-message {
     font-size: 100px;
 }
@@ -181,5 +188,4 @@ body {
     .year-label {
 
     }
-
 }

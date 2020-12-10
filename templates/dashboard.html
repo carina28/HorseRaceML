@@ -1,31 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Horse Race Data Dashboard</title>
-</head>
+{% extends "base.html" %}
 
-<body>
-    <nav>
-        <a href="#Dashboard">Dashboard</a>
-        <ul>
-            <li>
-                <a href="#Prediction">Prediction</a>
-            </li>
-            <li>
-                <a href="#Table">Table</a>
-            </li>
-            <li>
-                <a href="#About">About</a>
-            </li>
-        </ul>
-        <a href="#Logout">Logout</a>
-    </nav>
+{% block title %}Horse Race Data Dashboard{% endblock %}
 
+{% block content %}
     {% if message %}
     <p class="message" id="error-message">{{ message | safe }}</p>
     {% endif %}
@@ -92,7 +69,4 @@
         </div>
 
     </div>
-
-</body>
-
-</html>
+{% endblock %}

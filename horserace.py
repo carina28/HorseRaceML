@@ -32,6 +32,21 @@ class Race(db.Model):
 def dashboard():
     return render_template("dashboard.html")
 
+@app.route("/recommend")
+def recommend_view():
+    return render_template("recommend.html")
+
+@app.route("/table")
+def table_view():
+    return render_template("table.html")
+
+@app.route("/about")
+def about_view():
+    return render_template("about.html")
+
+
+
+
 @app.route('/go-dates', methods=['POST'])
 def go_dates():
     if request.method == 'POST':
@@ -44,8 +59,15 @@ def go_dates():
         # if year_start <= year_end:
         #     db.session.query(Race).filter(Race.year == year_start).count() # example sql execution, change
         #     data = Race(year_start, year_end)
-        return render_template("test.html")
+        return render_template("about.html")
 
+@app.route('/submit-rec', methods=['POST'])
+def submit_rec():
+    if request.method == 'POST':
+        year_start = request.form['rec-year-start']
+        year_end = request.form['rec-year-end']
+        if year_start > year_end:
+            return render_template('recommendation.html ')
 
 if __name__ == '__main__':
     app.run()
