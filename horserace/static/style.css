@@ -23,9 +23,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
+
+
+
 ol, ul {
 	list-style: none;
 }
@@ -47,9 +47,13 @@ html {
     font-family: 'Poppins', sans-serif;
 }
 
-/* body {
+body {
+    background-color: rgba(221, 221, 221, 0.87);
+}
 
-} */
+.paragraphs {
+	margin: 30px;
+}
 
 nav {
     font-size: 1.5em;
@@ -104,11 +108,6 @@ h1 {
     padding: 50px 5px;
 }
 
-/* select {
-    font-size: 0.85em;
-    padding: 5px 5px;
-} */
-
 #horse-rank-finish {
     width: 50%;
     height: 500px;
@@ -123,9 +122,9 @@ form:first-of-type {
     flex-wrap: wrap;
 }
 
-/*#rec-year-start, rec-year-end {
-    font-size: 10em;
-}*/
+#main_content {
+    padding: 25px;
+}
 
 #track-condition {
     width: 50%;
@@ -145,9 +144,6 @@ form:first-of-type {
     background-color: #DB3A34
 }
 
-body {
-    background-color: rgba(221, 221, 221, 0.87);
-}
 
 #year-select-button {
     margin: 0 8px;
@@ -158,10 +154,6 @@ body {
     align-content: center;
 }
 
-#about p {
-    margin: 100px 100px;
-    font: green;
-}
 
 #error-message {
     font-size: 100px;

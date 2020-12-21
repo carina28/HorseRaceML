@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -14,10 +14,7 @@
         <a href="{{ url_for('dashboard') }}">Dashboard</a>
         <ul>
             <li>
-                <a href="{{ url_for('recommend_view') }}">Recommend</a>
-            </li>
-            <li>
-                <a href="{{ url_for('table_view') }}">Table</a>
+                <a href="{{ url_for('recommend_view') }}">Prediction</a>
             </li>
             <li>
                 <a href="{{ url_for('about_view') }}">About</a>

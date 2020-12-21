@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__) # initializes
 
 ENV = 'dev'
+app.static_folder = 'static'
 
 if ENV == 'dev':
     app.debug = True
@@ -14,5 +15,7 @@ else:
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+
+
 
 from horserace import routes
