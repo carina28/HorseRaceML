@@ -11,16 +11,6 @@ from horserace import db
 #         self.username = username
 #         self.password = password
 
-# class Race(db.Model):
-#     __tablename__ = 'race'
-#     race_id = db.Column(db.Integer, primary_key=True)
-#     year = db.Column(db.Integer, nullable=False)
-#     race = db.Column(db.String(60), nullable=False)
-#
-#     def __init__(self, year, race):
-#         self.year = year
-#         self.race = race
-
 
 class RaceData(db.Model):
     __tablename__ = 'race_data'

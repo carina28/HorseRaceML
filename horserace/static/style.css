@@ -51,6 +51,11 @@ body {
     background-color: rgba(221, 221, 221, 0.87);
 }
 
+#login-form, #login-error-msg-holder {
+    display: flex;
+    justify-content: center;
+}
+
 .paragraphs {
 	margin: 30px;
 }
