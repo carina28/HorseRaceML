@@ -1,23 +1,34 @@
 from flask import render_template, url_for, flash, redirect, request, session
 from horserace.__init__ import app
+from horserace import db
+from flask_sqlalchemy import SQLAlchemy
+from horserace.models import User
 from horserace.models import RaceData
 import matplotlib as matplotlib
-import cufflinks as cf
 import pandas as pd
-import json
 import numpy as np
 
-@app.route("/")
+app.secret_key = 'somethingSecret'
+
+
 @app.route("/login", methods=['GET', 'POST'])
+@app.route("/", methods=['GET', 'POST'])
 def login():
+    global db_username, db_password
     if request.method == 'POST':
-        session.pop('user_id', None)
+        # session.pop('user_id', None)
         username = request.form['username']
         password = request.form['password']
+        db_user = User.query.filter_by(username=username).first()
 
-        # check for user in db, place here
-        if user and user.password == password:
-            session['user_id'] = user.id
+        if db_user != None:
+            db_username = db_user.username
+            db_password = db_user.password
+
+            if username == db_username and password == db_password:
+                return redirect(url_for('dashboard'))
+        else:
+            return redirect(url_for('login'))
 
     return render_template("informational/login.html")
 

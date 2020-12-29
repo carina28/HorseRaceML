@@ -4,6 +4,7 @@ from flask_login import LoginManager
 
 app = Flask(__name__) # initializes
 
+
 ENV = 'dev'
 app.static_folder = 'static'
 
