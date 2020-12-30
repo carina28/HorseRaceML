@@ -21,7 +21,7 @@ def login():
         password = request.form['password']
         db_user = User.query.filter_by(username=username).first()
 
-        if db_user != None:
+        if db_user is not None:
             db_username = db_user.username
             db_password = db_user.password
 
@@ -47,3 +47,6 @@ def recommend_view():
 def about_view():
     return render_template("informational/about.html")
 
+# @app.route("/logout")
+# def logout():
+#     return render_template("informational/login.html")
