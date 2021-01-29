@@ -48,11 +48,21 @@ html {
 }
 
 body {
-    background-color: white;
+
 }
 
 main {
     padding: 0 5% 0 5%;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+footer {
+    height: 50px;
+    text-align: center;
+    padding-top: 20px;
+    background: lightgrey;
+    margin-top: 50px;
 }
 
 #login-form, #login-error-msg-holder {
@@ -65,7 +75,7 @@ main {
 }
 
 nav {
-    font-size: 1.8em;
+    font-size: 1.7em;
     display: flex;
     justify-content: center;
     background-color: #117777;
@@ -93,6 +103,8 @@ ul {
     display: flex;
     justify-content: space-evenly;
 }
+
+
 
 nav a{
     text-decoration: none;
@@ -162,7 +174,6 @@ form:first-of-type {
     align-self: center;
     align-content: center;
 }
-
 
 #error-message {
     font-size: 100px;
