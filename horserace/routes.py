@@ -8,8 +8,6 @@ import matplotlib as matplotlib
 import pandas as pd
 import numpy as np
 
-# app.secret_key = 'somethingSecret'
-
 @app.route("/login", methods=['GET', 'POST'])
 @app.route("/", methods=['GET', 'POST'])
 def login():
