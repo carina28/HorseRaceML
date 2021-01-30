@@ -12,7 +12,7 @@ app.static_folder = 'static'
 
 app.debug = True
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Zergling22!@localhost/triple-crown'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres:Zergling22!@localhost/triple-crown'
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'DATABASE_URL'
 
 
