@@ -10,7 +10,7 @@ app = Flask(__name__) # initializes
 app.static_folder = 'static'
 
 
-app.debug = True
+# app.debug = True
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Zergling22!@localhost/triple-crown'
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'DATABASE_URL'
 
